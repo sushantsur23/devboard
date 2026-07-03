@@ -3,15 +3,15 @@
 # Goal To install multiple versions of Go and do linting for multiple versions
 name: Go Linter
 
-on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-  workflow_call:
+# on:
+#   push:
+#     branches: [ "main" ]
+#   pull_request:
+#     branches: [ "main" ]
+#   workflow_call:
 
-# on: 
-#     workflow_dispatch:
+on: 
+    workflow_dispatch:
 
 jobs:
     code-format:
