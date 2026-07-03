@@ -2,16 +2,16 @@
 
 name: Docker Scan
 
-on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-  workflow_call:
+# on:
+#   push:
+#     branches: [ "main" ]
+#   pull_request:
+#     branches: [ "main" ]
+#   workflow_call:
 
 
-# on: 
-#     workflow_call:
+on: 
+    workflow_call:
 
 jobs:
     docker-file-lint-and-scan:
