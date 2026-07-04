@@ -18,9 +18,15 @@ jobs:
         steps:
             - name: Code Checkout
               uses: actions/checkout@v7
+              with:
+                fetch-depth: 0  # IMPORTANT: Required for proper code coverage/blame analysis
 
             - name: SonarQube Scan
               uses: SonarSource/sonarqube-scan-action@v8.2.0
               env:
                 SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
                 SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+              with:
+                args: >
+                  -Dsonar.verbose=true
+                  -Dsonar.qualitygate.wait=true  # IMPORTANT: Fails the job if Quality Gate fails
