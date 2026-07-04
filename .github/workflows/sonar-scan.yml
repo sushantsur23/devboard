@@ -2,15 +2,15 @@
 
 name: Sonar Qube Scan
 
-on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-  workflow_call:
-
 # on:
-#     workflow_call:
+#   push:
+#     branches: [ "main" ]
+#   pull_request:
+#     branches: [ "main" ]
+#   workflow_call:
+
+on:
+    workflow_call:
 
 jobs:
     sonar-scanner:
