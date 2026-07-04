@@ -29,4 +29,7 @@ jobs:
               with:
                 args: >
                   -Dsonar.verbose=true
-                  -Dsonar.qualitygate.wait=true  # IMPORTANT: Fails the job if Quality Gate fails
+                  -Dsonar.qualitygate.wait=true
+                  -Dsonar.projectKey=devboard
+                  -Dsonar.projectName=devboard
+                  -Dsonar.sources=backend,frontend
