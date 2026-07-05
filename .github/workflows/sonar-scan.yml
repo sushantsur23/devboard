@@ -14,22 +14,45 @@ on:
 
 jobs:
     sonar-scanner:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Code Checkout
-              uses: actions/checkout@v7
-              with:
-                fetch-depth: 0  # IMPORTANT: Required for proper code coverage/blame analysis
+      runs-on: ubuntu-latest
+      steps:
+        - name: Code Checkout
+          uses: actions/checkout@v7
+          with:
+            fetch-depth: 0
 
-            - name: SonarQube Scan
-              uses: SonarSource/sonarqube-scan-action@v8.2.0
-              env:
-                SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-                SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
-              with:
-                args: >
-                  -Dsonar.verbose=true
-                  -Dsonar.qualitygate.wait=true
-                  -Dsonar.projectKey=devboard
-                  -Dsonar.projectName=devboard
-                  -Dsonar.sources=backend,frontend
+        - name: Debug Sonar Configuration
+          shell: bash
+          env:
+            SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+            SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          run: |
+            echo "===== Sonar Debug ====="
+
+            # Host URL checks
+            echo "Host URL length: ${#SONAR_HOST_URL}"
+            echo "Host: $(echo "$SONAR_HOST_URL" | awk -F/ '{print $3}')"
+
+            # Token checks
+            echo "Token length: ${#SONAR_TOKEN}"
+
+            if [ -z "$SONAR_TOKEN" ]; then
+              echo "ERROR: SONAR_TOKEN is empty"
+              exit 1
+            fi
+
+            # This will appear as *** in the logs
+            echo "Token: $SONAR_TOKEN"
+
+        - name: SonarQube Scan
+          uses: SonarSource/sonarqube-scan-action@v8.2.0
+          env:
+            SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+            SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+          with:
+            args: >
+              -Dsonar.verbose=true
+              -Dsonar.qualitygate.wait=true
+              -Dsonar.projectKey=devboard
+              -Dsonar.projectName=devboard
+              -Dsonar.sources=backend,frontend
