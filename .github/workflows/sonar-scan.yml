@@ -28,7 +28,10 @@ jobs:
             SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           run: |
             echo "===== Sonar Debug ====="
-
+            
+            echo "Testing connectivity if possible"
+            curl -v --connect-timeout 10 http://18.117.184.196:9000
+            
             # Host URL checks
             echo "Host URL length: ${#SONAR_HOST_URL}"
             echo "Host: $(echo "$SONAR_HOST_URL" | awk -F/ '{print $3}')"
