@@ -30,7 +30,7 @@ jobs:
             echo "===== Sonar Debug ====="
             
             echo "Testing connectivity if possible"
-            curl -v --connect-timeout 10 http://18.117.184.196:9000
+            curl -v --connect-timeout 10 http://3.145.46.241:9000
             
             # Host URL checks
             echo "Host URL length: ${#SONAR_HOST_URL}"
