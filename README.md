@@ -1,4 +1,4 @@
-# 🚀 Enterprise DevSecOps CI/CD Pipeline using GitHub Actions
+## 🚀 Enterprise DevSecOps CI/CD Pipeline using GitHub Actions
 
 <p align="center">
 
@@ -18,7 +18,7 @@
 
 ---
 
-# 📖 Overview
+## 📖 Overview
 
 This repository demonstrates an **Enterprise DevSecOps CI/CD Pipeline** built entirely using **GitHub Actions**.
 
@@ -30,7 +30,7 @@ The repository contains reusable GitHub workflows that execute independently and
 
 ---
 
-# 🎯 Project Objectives
+## 🎯 Project Objectives
 
 - Build Enterprise DevSecOps Pipeline
 - Learn GitHub Actions Reusable Workflows
@@ -47,7 +47,7 @@ The repository contains reusable GitHub workflows that execute independently and
 
 ---
 
-# 🏗 Enterprise Pipeline Architecture
+## 🏗 Enterprise Pipeline Architecture
 
 ```
 
@@ -123,7 +123,7 @@ Production Ready
 
 ---
 
-# 📁 Repository Structure
+## 📁 Repository Structure
 
 ```
 
@@ -165,7 +165,7 @@ README.md
 
 ---
 
-# ⚙ Workflow Overview
+## ⚙ Workflow Overview
 
 | Workflow | Purpose |
 |------------|--------------------------------|
@@ -183,7 +183,7 @@ README.md
 
 ---
 
-# 🚀 Workflow Details
+## 🚀 Workflow Details
 
 ---
 
@@ -396,7 +396,7 @@ Checks
 
 ---
 
-# 🖥️ GitHub Runners & Execution Environment
+## 🖥️ GitHub Runners & Execution Environment
 
 This project demonstrates both **GitHub-hosted runners** and **Self-Hosted GitHub Actions runners** to simulate an enterprise CI/CD environment.
 
@@ -449,7 +449,7 @@ Using a self-hosted runner enables deployments within a private network while ma
 In enterprise environments, organizations commonly adopt a **hybrid runner strategy**, where GitHub-hosted runners are used for CI tasks, while self-hosted runners deployed on cloud infrastructure (such as AWS EC2) are reserved for deployment and environment-specific operations. This approach combines the scalability of GitHub-managed infrastructure with the security and control of self-managed deployment environments.
 
 
-# 🔐 Enterprise Security Controls
+## 🔐 Enterprise Security Controls
 
 | Security Control | Status |
 |------------------|--------|
@@ -466,7 +466,7 @@ In enterprise environments, organizations commonly adopt a **hybrid runner strat
 
 ---
 
-# 🚦 Production Security Gate
+## 🚦 Production Security Gate
 
 Production deployments should be blocked if any scan reports the following:
 
@@ -479,7 +479,7 @@ Production deployments should be blocked if any scan reports the following:
 
 ---
 
-# ⚡ Parallel Execution
+## ⚡ Parallel Execution
 
 The following jobs execute simultaneously:
 
@@ -494,7 +494,7 @@ This significantly reduces overall pipeline execution time.
 
 ---
 
-# 🔁 Matrix Strategy
+## 🔁 Matrix Strategy
 
 Docker Build uses Matrix Strategy.
 
@@ -514,7 +514,7 @@ Benefits
 
 ---
 
-# 💻 Technology Stack
+## 💻 Technology Stack
 
 | Category | Technology |
 |------------|----------------|
@@ -534,7 +534,7 @@ Benefits
 
 ---
 
-# 📈 DevSecOps Best Practices Implemented
+## 📈 DevSecOps Best Practices Implemented
 
 ✅ Shift Left Security
 
@@ -566,7 +566,7 @@ Benefits
 
 ---
 
-# 🔮 Future Enhancements
+## 🔮 Future Enhancements
 
 - Terraform Security (Checkov)
 
@@ -596,7 +596,7 @@ Benefits
 
 ---
 
-# 📚 Learning Outcomes
+## 📚 Learning Outcomes
 
 This repository demonstrates how enterprise organizations automate secure software delivery using:
 
@@ -611,21 +611,6 @@ This repository demonstrates how enterprise organizations automate secure softwa
 - Docker Security
 - Runtime Security
 - Automated Deployment
-
----
-
-# 📷 Recommended Screenshots
-
-To make this repository more attractive, include:
-
-- 📸 GitHub Actions Pipeline
-- 📸 SonarQube Dashboard
-- 📸 Trivy Scan Report
-- 📸 GitLeaks Report
-- 📸 OWASP ZAP Report
-- 📸 Application Dashboard
-- 📸 DockerHub Repository
-- 📸 Workflow Visualization
 
 ---
 
